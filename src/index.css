@@ -48,6 +48,10 @@ textarea {
 	padding: 2em 0.5em;
 }
 
+.description-text {
+	display: none;
+}
+
 /*.app-header h1 {
 	border-bottom: 2px solid white;
 }*/
@@ -124,6 +128,23 @@ button {
 	border-bottom: 2px solid grey;
 	padding-left: 0.5em;
 	padding-right: 0.5em;
+}
+
+@keyframes slideout {
+	from {
+		margin-left: 0%;
+	}
+
+	to {
+		margin-left: 150%;
+	}
+}
+
+.slide-off {
+	animation-duration: 2s;
+	animation-name: slideout;
+	/*transform: translateX(400px);
+	transition: translateX 2s ease-in;*/
 }
 
 .saved-dialogue-list-item p {
@@ -277,6 +298,10 @@ button {
 		padding: 2em 2em;
 	}
 
+	.description-text {
+		display: block;
+	}
+
 	.app-view-toggles {
 		padding: 1em 2em;
 	}
@@ -302,6 +327,10 @@ button {
 
 	.app-header {
 		padding: 2em 8em;
+	}
+
+	.description-text {
+		display: block;
 	}
 
 	.app-view-toggles {
@@ -330,6 +359,10 @@ button {
 		padding: 2em 12em;
 	}
 
+	.description-text {
+		display: block;
+	}
+
 	.app-view-toggles {
 		padding: 1em 12em;
 	}
@@ -354,6 +387,10 @@ button {
 
 	.app-header {
 		padding: 2em 15em;
+	}
+
+	.description-text {
+		display: block;
 	}
 
 	.app-view-toggles {
@@ -382,6 +419,10 @@ button {
 		padding: 2em 20em;
 	}
 
+	.description-text {
+		display: block;
+	}
+
 	.app-view-toggles {
 		padding: 1em 20em;
 	}
@@ -406,6 +447,10 @@ button {
 
 	.app-header {
 		padding: 2em 40em;
+	}
+
+	.description-text {
+		display: block;
 	}
 
 	.app-view-toggles {

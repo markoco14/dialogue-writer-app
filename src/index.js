@@ -2,13 +2,8 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 import './index.css';
+import { nanoid } from 'nanoid';
 // import App from './App';
-
-
-
-
-// create your database
-// let db;
 
 /*
 	dialogue control buttons section
@@ -289,20 +284,32 @@ class DeleteSavedDialogueButton extends React.Component {
 class SavedDialogueTitle extends React.Component {
 	render() {
 		return(
+				<p>{this.props.title}</p>	
+		)
+	}
+}
+
+class SavedDialogueListItem extends React.Component {
+	render() {
+		return(
 			<div className="saved-dialogue-list-item">
-				<p>{this.props.title}</p>
+				<SavedDialogueTitle 
+					title={this.props.title}
+				/>
 				<div>
-					<LoadSavedDialogueButton 
+					<LoadSavedDialogueButton
+						// key={nanoid()} 
 						onClick={this.props.onLoadDialogue}
 						datatitle={this.props.title}
 					/>
 					<DeleteSavedDialogueButton 
+						// key={nanoid()}
 						onClick={this.props.onDeleteDialogue}
 						datatitle={this.props.title}
 					/>
 				</div>
 			</div>
-		)
+		);
 	}
 }
 
@@ -320,25 +327,17 @@ class SavedDialogueList extends React.Component {
 		} else {	
 			const savedDialoguesArray = savedDialoguesString.split(', ')
 			const savedDialoguesList = [];
-			let keyCount = 0;
-			let key  = "a" + keyCount
 
 			savedDialoguesArray.forEach((title, i) => {
 				savedDialoguesList.push(
-					<div className="flex">
-						<SavedDialogueTitle 
-							title={title}
-							key={key}
-							onLoadDialogue={this.props.onLoadDialogue}
-							onDeleteDialogue={this.props.onDeleteDialogue}
-						/>
-
-						
-
-						
-					</div>
+					<SavedDialogueListItem 
+						key={nanoid()}
+						title={title}
+						onLoadDialogue={this.props.onLoadDialogue}
+						onDeleteDialogue={this.props.onDeleteDialogue}
+					/>
+					
 				)
-				keyCount += 1;
 			}) 
 
 			return(
@@ -404,7 +403,7 @@ class Header extends React.Component {
 		return(
 			<div className="app-header">
 				<h1>Dialogue Writer</h1>
-				<p>
+				<p class="description-text">
 					Write 2 person dialogues for your English classes
 					so your students can practice speaking. Save and edit up to 5 dialogues
 					any time.
@@ -453,6 +452,34 @@ class AppContainer extends React.Component {
 	
 
 	handleSwitchToWritingView() {
+		const savedDialogueListItems = document.querySelectorAll('.saved-dialogue-list-item')
+		console.log(savedDialogueListItems)
+		// savedDialogueListItems.forEach((item) => {
+		// 	item.classList.add('slide-off')
+		// })
+
+		async function slideOut() {
+			savedDialogueListItems.forEach((item, index) => {
+				setTimeout(async function changeClass() {
+						item.classList.add('slide-off')
+					}, index * 200)	
+			// setTimeout(function(){
+			// 	item.classList.add('slide-off')	
+			// }, 1000)
+			})
+			await delay
+		}
+
+		async function delay() {
+			console.log('done')
+		}
+		// slideOut().then(delay)
+
+		// async function changeState() {
+		// 	console.log("done")
+		// }
+
+		// slideOut().then(changeState)
 		this.setState({
 			isViewingSavedDialogues: false,
 			writeButtonStyle: 'view-toggle-button-selected',
@@ -606,6 +633,8 @@ class AppContainer extends React.Component {
 				currentSpeakerIsA: false,
 			})
 		}
+
+		// focusInputOnLoad();
 	}
 
 	handleDeleteDialogue(e) {
