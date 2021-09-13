@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/dialogue-writer-app/static/css/main.b2ee2669.chunk.css",
+    "main.js": "/dialogue-writer-app/static/js/main.e6a12168.chunk.js",
+    "main.js.map": "/dialogue-writer-app/static/js/main.e6a12168.chunk.js.map",
+    "runtime-main.js": "/dialogue-writer-app/static/js/runtime-main.ac087cec.js",
+    "runtime-main.js.map": "/dialogue-writer-app/static/js/runtime-main.ac087cec.js.map",
+    "static/js/2.61ca3cce.chunk.js": "/dialogue-writer-app/static/js/2.61ca3cce.chunk.js",
+    "static/js/2.61ca3cce.chunk.js.map": "/dialogue-writer-app/static/js/2.61ca3cce.chunk.js.map",
+    "index.html": "/dialogue-writer-app/index.html",
+    "static/css/main.b2ee2669.chunk.css.map": "/dialogue-writer-app/static/css/main.b2ee2669.chunk.css.map",
+    "static/js/2.61ca3cce.chunk.js.LICENSE.txt": "/dialogue-writer-app/static/js/2.61ca3cce.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ac087cec.js",
+    "static/js/2.61ca3cce.chunk.js",
+    "static/css/main.b2ee2669.chunk.css",
+    "static/js/main.e6a12168.chunk.js"
+  ]
+}
