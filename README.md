@@ -1,6 +1,6 @@
 # The Dialogue Writer
 
-Write dialgoues...
+Write dialogues...
 
 ## Current features
 
