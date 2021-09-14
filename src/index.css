@@ -84,6 +84,17 @@ button {
 	border: 2px solid #8CE68F;
 }
 
+.left {
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+.right {
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+
 .view-toggle-button-selected {
 	font-weight: bold;
 	font-size: 1.1em;
@@ -172,6 +183,14 @@ button {
 
 }
 
+.saved-dialogue-list-load-button:active {
+	background-color: #79D47C;
+}
+
+.saved-dialogue-list-delete-button:active {
+	background-color: #E68C8C;
+}
+
 /* style write current dialogue UI */
 
 .dialogue-writing-container {
@@ -207,6 +226,7 @@ button {
 	width: 100%;
 	height: 1.25em;
 	font-size: 1.25em;
+	border-radius: 5px;
 }
 
 /*.dialogue-section {
@@ -239,10 +259,20 @@ button {
 
 .speaker-input-textarea {
 	font-size: 1.5em;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
 }
 
 .speaker-input-button {
 	width: 20%;
+	border: none;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	background-color: #8CE68F;
+}
+
+.speaker-input-button:active {
+	background-color: #79D47C;
 }
 
 
@@ -260,9 +290,30 @@ button {
 	align-items: right;
 }
 
-.save-button {
+.dialogue-button {
 	position:  relative;
 	height: 30px;
+	width: 100px;
+	border: none;
+	border-radius: 5px;
+}
+
+.save-button {
+	background-color: #8CE68F;
+	margin-right: 0.2em;
+}
+
+.save-button:active {
+	background-color: #79D47C;
+}
+
+.clear-button {
+	background-color: #E68C8C;
+
+}
+
+.clear-button:active {
+	background-color: #EC2525;
 }
 
 .dialogue-text {
@@ -320,13 +371,9 @@ button {
 }
 
 @media (min-width: 600px) {
-	.appContainer {
-		/*width: 80%;*/
-		/*margin: 2em auto;*/
-	}
-
+	
 	.app-header {
-		padding: 2em 8em;
+		padding: 2em 2em;
 	}
 
 	.description-text {
@@ -334,29 +381,126 @@ button {
 	}
 
 	.app-view-toggles {
-		padding: 1em 8em;
+		padding: 1em 2em;
 	}
 
 	.saved-dialogue-list {
-		padding: 1em 8em;
+		padding: 1em 2em;
 	}
 
 	.dialogue-inputs-container {
-		padding: 1em 8em;
+		padding: 1em 2em;
 	}
 
 	.dialogue-section {
-		padding: 1em 8em;
+		padding: 1em 2em;
 	}
 }
 
 @media (min-width:  800px) {
+
+	.app-header {
+		padding: 2em 5em;
+	}
+
+	.description-text {
+		display: block;
+	}
+
+	.app-view-toggles {
+		padding: 1em 5em;
+	}
+
+	.saved-dialogue-list {
+		padding: 1em 5em;
+	}
+
+	.dialogue-inputs-container {
+		padding: 1em 5em;
+	}
+
+	.dialogue-section {
+		padding: 1em 5em;
+	}
+}
+
+/* media query at 100% zoom / 1000px */
+@media (min-width:  1000px) {
+	
+
+	.app-header {
+		padding: 2em 11em;
+		font-size: 1em;
+	}
+
+	.description-text {
+		display: block;
+	}
+
+	.app-view-toggles {
+		padding: 2em 11em;
+		font-size: 1em;	}
+
+	.app-view-toggles button {
+		height: 50px;
+	}
+
+	.saved-dialogue-list {
+		padding: 2em 11em;
+		font-size: 1em;	}
+
+	.saved-dialogue-list-item {
+		height: 50px;
+	}
+
+	.saved-dialogue-list-item button {
+		height: 40px;
+		width: 60px;
+		font-size: 1em;
+	}
+
+	.dialogue-inputs-container {
+		padding: 2em 11em;
+		font-size: 1em;	}
+
+	.dialogue-title-container input {
+		height: 40px;
+	}
+
+	.speaker-input-textarea {
+		height: 40px;
+	}
+
+	.speaker-input-button {
+		font-size: 1em;
+		height: 40px;
+	}
+
+	.dialogue-section {
+		padding: 2em 11em;
+		font-size: 1em;	}
+
+	.dialogue-button {
+		height: 30px;
+		width: 120px;
+		font-size: 1em;
+	}
+
+	.dialogue-text {
+		min-height: 100px;
+	}
+}
+
+
+/* media query at 75% zoom / 1100px */
+@media (min-width:  1100px) {
 	.appContainer {
 		/*width: 60%;*/
 	}
 
 	.app-header {
-		padding: 2em 12em;
+		padding: 2em 17em;
+		font-size: 1em;
 	}
 
 	.description-text {
@@ -364,29 +508,72 @@ button {
 	}
 
 	.app-view-toggles {
-		padding: 1em 12em;
+		padding: 2em 15em;
+		font-size: 1.2em;
+	}
+
+	.app-view-toggles button {
+		height: 75px;
 	}
 
 	.saved-dialogue-list {
-		padding: 1em 12em;
+		padding: 2em 15em;
+		font-size: 1.2em;
+	}
+
+	.saved-dialogue-list-item {
+		height: 75px;
+	}
+
+	.saved-dialogue-list-item button {
+		height: 50px;
+		width: 125px;
+		font-size: 1em;
 	}
 
 	.dialogue-inputs-container {
-		padding: 1em 12em;
+		padding: 2em 15em;
+		font-size: 1.2em;
+	}
+
+	.dialogue-title-container input {
+		height: 75px;
+	}
+
+	.speaker-input-textarea {
+		height: 75px;
+	}
+
+	.speaker-input-button {
+		font-size: 1em;
+		height: 75px;
 	}
 
 	.dialogue-section {
-		padding: 1em 12em;
+		padding: 2em 15em;
+		font-size: 1.2em;
+	}
+
+	.dialogue-button {
+		height: 50px;
+		width: 250px;
+		font-size: 1em;
+	}
+
+	.dialogue-text {
+		min-height: 100px;
 	}
 }
 
-@media (min-width:  1000px) {
+/* media query at 67% zoom / 1200px */
+@media (min-width:  1200px) {
 	.appContainer {
 		/*width: 60%;*/
 	}
 
 	.app-header {
 		padding: 2em 15em;
+		font-size: 1.2em;
 	}
 
 	.description-text {
@@ -394,29 +581,142 @@ button {
 	}
 
 	.app-view-toggles {
-		padding: 1em 15em;
+		padding: 2em 15em;
+		font-size: 1.2em;
+	}
+
+	.app-view-toggles button {
+		height: 75px;
 	}
 
 	.saved-dialogue-list {
-		padding: 1em 15em;
+		padding: 2em 15em;
+		font-size: 1.2em;
+	}
+
+	.saved-dialogue-list-item {
+		height: 75px;
+	}
+
+	.saved-dialogue-list-item button {
+		height: 50px;
+		width: 125px;
+		font-size: 1em;
 	}
 
 	.dialogue-inputs-container {
-		padding: 1em 15em;
+		padding: 2em 15em;
+		font-size: 1.2em;
+	}
+
+	.dialogue-title-container input {
+		height: 75px;
+	}
+
+	.speaker-input-textarea {
+		height: 75px;
+	}
+
+	.speaker-input-button {
+		font-size: 1em;
+		height: 75px;
 	}
 
 	.dialogue-section {
-		padding: 1em 15em;
+		padding: 2em 15em;
+		font-size: 1.2em;
+	}
+
+	.dialogue-button {
+		height: 50px;
+		width: 250px;
+		font-size: 1em;
+	}
+
+	.dialogue-text {
+		min-height: 100px;
 	}
 }
 
-@media (min-width:  1600px) {
+/* media query at 50% zoom / 1700px */
+@media (min-width:  1700px) {
 	.appContainer {
 		/*width: 60%;*/
 	}
 
+	.app-header {
+		padding: 2em 17em;
+		font-size: 1.5em;
+	}
+
+	.description-text {
+		display: block;
+	}
+
+	.app-view-toggles {
+		padding: 2em 17em;
+		font-size: 1.5em;
+	}
+
+	.app-view-toggles button {
+		height: 75px;
+	}
+
+	.saved-dialogue-list {
+		padding: 2em 17em;
+		font-size: 1.5em;
+	}
+
+	.saved-dialogue-list-item {
+		height: 75px;
+	}
+
+	.saved-dialogue-list-item button {
+		height: 50px;
+		width: 125px;
+		font-size: 1em;
+	}
+
+	.dialogue-inputs-container {
+		padding: 2em 17em;
+		font-size: 1.5em;
+	}
+
+	.dialogue-title-container input {
+		height: 75px;
+	}
+
+	.speaker-input-textarea {
+		height: 75px;
+	}
+
+	.speaker-input-button {
+		font-size: 1em;
+		height: 75px;
+	}
+
+	.dialogue-section {
+		padding: 2em 17em;
+		font-size: 1.5em;
+	}
+
+	.dialogue-button {
+		height: 50px;
+		width: 250px;
+		font-size: 1em;
+	}
+
+	.dialogue-text {
+		min-height: 100px;
+	}
+
+}
+
+/* media query for 33% zoom / 2500px */
+@media (min-width: 2500px) {
 	.app-header {
 		padding: 2em 20em;
+		font-size: 2em;
 	}
 
 	.description-text {
@@ -425,28 +725,69 @@ button {
 
 	.app-view-toggles {
 		padding: 1em 20em;
+		font-size: 2em;
+	}
+
+	.app-view-toggles button {
+		height: 100px;
 	}
 
 	.saved-dialogue-list {
 		padding: 1em 20em;
+		font-size: 2em;
+	}
+
+	.saved-dialogue-list-item {
+		height: 100px;
+	}
+
+	.saved-dialogue-list-item button {
+		height: 75px;
+		width: 150px;
+		font-size: 1em;
 	}
 
 	.dialogue-inputs-container {
 		padding: 1em 20em;
+		font-size: 2em;
+	}
+
+	.dialogue-title-container input {
+		height: 100px;
+	}
+
+	.speaker-input-textarea {
+		height: 100px;
+	}
+
+	.speaker-input-button {
+		height: 100px;
+		font-size: 1em;
 	}
 
 	.dialogue-section {
 		padding: 1em 20em;
+		font-size: 2em;
 	}
+
+	.dialogue-button {
+		height: 75px;
+		width: 250px;
+		font-size: 1em;
+	}
+
+	.dialogue-text {
+		min-height: 100px;
+	}
+
+
 }
 
-@media (min-width:  2000px) {
-	.appContainer {
-		/*width: 60%;*/
-	}
-
+/* media query for 25% zoom / 3400px */
+@media (min-width: 3400px) {
 	.app-header {
-		padding: 2em 40em;
+		padding: 2em 22em;
+		font-size: 2.5em;
 	}
 
 	.description-text {
@@ -454,20 +795,64 @@ button {
 	}
 
 	.app-view-toggles {
-		padding: 1em 40em;
+		padding: 1em 22em;
+		font-size: 2.5em;
+	}
+
+	.app-view-toggles button {
+		height: 100px;
 	}
 
 	.saved-dialogue-list {
-		padding: 1em 40em;
+		padding: 1em 22em;
+		font-size: 2.5em;
+	}
+
+	.saved-dialogue-list-item {
+		height: 100px;
+	}
+
+	.saved-dialogue-list-item button {
+		height: 75px;
+		width: 200px;
+		font-size: 1em;
 	}
 
 	.dialogue-inputs-container {
-		padding: 1em 40em;
+		padding: 1em 22em;
+		font-size: 2.5em;
+	}
+
+	.dialogue-title-container input {
+		height: 100px;
+	}
+
+	.speaker-input-textarea {
+		height: 100px;
+	}
+
+	.speaker-input-button {
+		font-size: 1em;
+		height: 100px;
 	}
 
 	.dialogue-section {
-		padding: 1em 40em;
+		padding: 1em 22em;
+		font-size: 2.5em;
 	}
+
+	.dialogue-button {
+		height: 75px;
+		width: 300px;
+		font-size: 1em;
+
+	}
+
+	.dialogue-text {
+		min-height: 100px;
+	}
+
+
 }
 
 @media (hover: hover) {

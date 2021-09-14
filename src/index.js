@@ -14,7 +14,7 @@ class SaveDialogueButton extends React.Component {
 
 		return(
 			<button 
-				className="save-button"
+				className="dialogue-button save-button"
 				onClick={this.props.onClick}
 			>
 				Save Dialogue
@@ -27,7 +27,7 @@ class ClearDialogueButton extends React.Component {
 	render() {
 		return(
 			<button
-				className="save-button"
+				className="dialogue-button clear-button"
 				onClick={this.props.onClick}
 			>
 				Clear Dialogue
@@ -425,8 +425,8 @@ class AppContainer extends React.Component {
 			currentSpeakerIsA: true,
 			currentSpeakerText: '',
 			isViewingSavedDialogues: false,
-			writeButtonStyle: 'view-toggle-button-selected',
-			loadButtonStyle: 'view-toggle-button'
+			writeButtonStyle: 'view-toggle-button-selected left',
+			loadButtonStyle: 'view-toggle-button right'
 		}
 		// functions to toggle between views
 		this.handleSwitchToWritingView = this.handleSwitchToWritingView.bind(this);
@@ -482,16 +482,16 @@ class AppContainer extends React.Component {
 		// slideOut().then(changeState)
 		this.setState({
 			isViewingSavedDialogues: false,
-			writeButtonStyle: 'view-toggle-button-selected',
-			loadButtonStyle: 'view-toggle-button'
+			writeButtonStyle: 'view-toggle-button-selected left',
+			loadButtonStyle: 'view-toggle-button right'
 		})
 	}
 
 	handleSwitchToSavedDialoguesView() {
 		this.setState({
 			isViewingSavedDialogues: true,
-			writeButtonStyle: 'view-toggle-button',
-			loadButtonStyle: 'view-toggle-button-selected'
+			writeButtonStyle: 'view-toggle-button left',
+			loadButtonStyle: 'view-toggle-button-selected right'
 		})
 	}
 
