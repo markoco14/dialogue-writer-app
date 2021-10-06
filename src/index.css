@@ -33,28 +33,30 @@ textarea {
 	height: 50px;
 }
 
-.appContainer {
+.container {
 	position: relative;
-	width: 100%;
-	/*padding: 0.5em;*/
 	margin: 0 auto;
-	/*border: 10px solid #FFFADA;*/
-	border-radius: 5px;
+	width: 100%;
+	max-width: 800px;
+	/*padding: 1em;*/
+}
+
+section {
+	padding: 2em 0.5em;
+
+}
+
+@media (min-width: 500px) {
+	section {
+		padding: 2em;
+	}
 }
 
 .app-header {
 	background-color: #8CE68F;
 	color: rgb(40,40,40);
-	padding: 2em 0.5em;
 }
 
-.description-text {
-	display: none;
-}
-
-/*.app-header h1 {
-	border-bottom: 2px solid white;
-}*/
 .app-header p {
 	font-size: 1.25em;
 }
@@ -65,8 +67,8 @@ textarea {
 button {
 	font-weight: bold;
 }
+
 .app-view-toggles {
-	padding: 0.5em 0.5em;
 	background-color: white;
 	/*border: 2px solid #8CE68F;*/
 }
@@ -117,7 +119,6 @@ button {
 /* style saved dialogues list UI  */
 
 .saved-dialogue-list {
-	padding: 0.5em;
 	background-color: white;
 	/*margin: 1em	2em	0;
 	padding: 1em;*/
@@ -238,7 +239,6 @@ button {
 
 /* style the dialogue text inputs */
 .dialogue-inputs-container {
-	padding: 0.5em 0.5em;
 	background-color: white;
 }
 
@@ -277,7 +277,6 @@ button {
 
 
 .dialogue-section {
-	padding: 0.5em;
 	background-color: white;
 }
 
@@ -345,6 +344,12 @@ button {
 /* hover specific media queries */
 
 @media (min-width: 500px) {
+	section {
+		padding: 2em;
+	}
+}
+
+/*@media (min-width: 500px) {
 	.app-header {
 		padding: 2em 2em;
 	}
@@ -368,9 +373,9 @@ button {
 	.dialogue-section {
 		padding: 1em 2em;
 	}
-}
+}*/
 
-@media (min-width: 600px) {
+/*@media (min-width: 600px) {
 	
 	.app-header {
 		padding: 2em 2em;
@@ -396,8 +401,8 @@ button {
 		padding: 1em 2em;
 	}
 }
-
-@media (min-width:  800px) {
+*/
+/*@media (min-width:  800px) {
 
 	.app-header {
 		padding: 2em 5em;
@@ -423,11 +428,9 @@ button {
 		padding: 1em 5em;
 	}
 }
-
+*/
 /* media query at 100% zoom / 1000px */
-@media (min-width:  1000px) {
-	
-
+/*@media (min-width:  1000px) {
 	.app-header {
 		padding: 2em 11em;
 		font-size: 1em;
@@ -489,13 +492,12 @@ button {
 	.dialogue-text {
 		min-height: 100px;
 	}
-}
+}*/
 
 
 /* media query at 75% zoom / 1100px */
-@media (min-width:  1100px) {
+/*@media (min-width:  1100px) {
 	.appContainer {
-		/*width: 60%;*/
 	}
 
 	.app-header {
@@ -564,11 +566,10 @@ button {
 		min-height: 100px;
 	}
 }
-
+*/
 /* media query at 67% zoom / 1200px */
-@media (min-width:  1200px) {
+/*@media (min-width:  1200px) {
 	.appContainer {
-		/*width: 60%;*/
 	}
 
 	.app-header {
@@ -636,12 +637,11 @@ button {
 	.dialogue-text {
 		min-height: 100px;
 	}
-}
+}*/
 
 /* media query at 50% zoom / 1700px */
-@media (min-width:  1700px) {
+/*@media (min-width:  1700px) {
 	.appContainer {
-		/*width: 60%;*/
 	}
 
 	.app-header {
@@ -711,9 +711,9 @@ button {
 	}
 
 }
-
+*/
 /* media query for 33% zoom / 2500px */
-@media (min-width: 2500px) {
+/*@media (min-width: 2500px) {
 	.app-header {
 		padding: 2em 20em;
 		font-size: 2em;
@@ -782,9 +782,9 @@ button {
 
 
 }
-
+*/
 /* media query for 25% zoom / 3400px */
-@media (min-width: 3400px) {
+/*@media (min-width: 3400px) {
 	.app-header {
 		padding: 2em 22em;
 		font-size: 2.5em;
@@ -854,7 +854,7 @@ button {
 
 
 }
-
+*/
 @media (hover: hover) {
 
 	/*.view-toggle-button:hover {
