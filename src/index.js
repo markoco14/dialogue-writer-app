@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-// a JS file, yay!
 import React from 'react';
 import ReactDom from 'react-dom';
 import './index.css';
@@ -1587,6 +1585,3 @@ ReactDom.render(
 // }
 
 // focusInputOnLoad();
-
-
->>>>>>> 17afd199fea30a7c179bddac9cca35731eb357ff
