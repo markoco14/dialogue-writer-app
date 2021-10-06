@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/dialogue-writer-app/static/css/main.28efe26e.chunk.css",
-    "main.js": "/dialogue-writer-app/static/js/main.f0e85777.chunk.js",
-    "main.js.map": "/dialogue-writer-app/static/js/main.f0e85777.chunk.js.map",
+    "main.css": "/dialogue-writer-app/static/css/main.a16d3285.chunk.css",
+    "main.js": "/dialogue-writer-app/static/js/main.be29b11d.chunk.js",
+    "main.js.map": "/dialogue-writer-app/static/js/main.be29b11d.chunk.js.map",
     "runtime-main.js": "/dialogue-writer-app/static/js/runtime-main.ac087cec.js",
     "runtime-main.js.map": "/dialogue-writer-app/static/js/runtime-main.ac087cec.js.map",
     "static/js/2.58ddcb75.chunk.js": "/dialogue-writer-app/static/js/2.58ddcb75.chunk.js",
     "static/js/2.58ddcb75.chunk.js.map": "/dialogue-writer-app/static/js/2.58ddcb75.chunk.js.map",
     "index.html": "/dialogue-writer-app/index.html",
-    "static/css/main.28efe26e.chunk.css.map": "/dialogue-writer-app/static/css/main.28efe26e.chunk.css.map",
+    "static/css/main.a16d3285.chunk.css.map": "/dialogue-writer-app/static/css/main.a16d3285.chunk.css.map",
     "static/js/2.58ddcb75.chunk.js.LICENSE.txt": "/dialogue-writer-app/static/js/2.58ddcb75.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.ac087cec.js",
     "static/js/2.58ddcb75.chunk.js",
-    "static/css/main.28efe26e.chunk.css",
-    "static/js/main.f0e85777.chunk.js"
+    "static/css/main.a16d3285.chunk.css",
+    "static/js/main.be29b11d.chunk.js"
   ]
 }
